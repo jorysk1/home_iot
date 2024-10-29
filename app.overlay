@@ -9,5 +9,14 @@
 		
 	aliases {
 		led-yellow = &ledyellow;
+		lcd-screen = &lcdscreen;
+	};
+};
+
+&i2c0 {
+	lcdscreen: lcd_screen@27{
+		compatible = "i2c-device";
+		reg = <0x27>;
+		label = "LCD_SCREEN";
 	};
 };
