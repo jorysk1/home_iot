@@ -13,11 +13,22 @@
 	    dio-gpios = <&gpio0 17 GPIO_ACTIVE_LOW>;
 	    label = "XHT11";
 	};
+	button_1: button_1 {
+        gpios = <&gpio0 16 GPIO_ACTIVE_LOW>;
+		label = "Button 1";
+    };
+
+    button_2: button_2 {
+        gpios = <&gpio0 27 GPIO_ACTIVE_LOW>;
+		label = "Button 2";
+    };
 };
 		
 	aliases {
 		led-yellow = &ledyellow;
 		lcd-screen = &lcdscreen;
+		button-1 = &button_1;
+		button-2 = &button_2;
 	};
 
 	zephyr,user {
